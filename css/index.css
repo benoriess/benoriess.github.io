@@ -1,0 +1,356 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    background-color: #000; /* Black Background */
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #222; /* Darker Background for the Navbar */
+    flex-wrap: wrap;
+}
+
+/* Logo Styling */
+.logo img {
+    height: 60px;
+}
+
+/* Search Bar Container Styling */
+.search-bar {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 0;
+    width: 100%;
+}
+a {
+    text-decoration: none;
+}
+/* Search Bar Styling */
+.search-bar input {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    background-color: #333; /* Darker Input Field */
+    color: white;
+    transition: width 0.4s ease;
+}
+
+.search-bar input:focus {
+    width: 100%;
+    max-width: 350px; /* Expands on focus */
+}
+
+/* Search Button Styling */
+.search-bar button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #777;
+}
+
+/* Remove Cart Icon Styling */
+ .cart-icon {
+    position: relative;
+    margin-left: 10px;
+}
+
+.cart-icon button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 3px 7px;
+}
+
+.cart-dropdown {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #111;
+    border: 1px solid #ccc;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    color: white;
+} */
+
+/* Remove or adjust search-cart-wrapper */
+.search-cart-wrapper {
+    display: none; /* Or adjust according to layout needs */
+}
+
+/* Result Message */
+.result-message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    color: white;
+}
+
+/* Product Photo */
+.product-photo {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.product-photo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Categories Section Styling */
+.categories {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.categories h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+    color: #f9f9f9;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+}
+
+.categories h2::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    width: 60px;
+    height: 4px;
+    background: #ff7f50;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* Container for Category Images */
+.category-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Category Item Styling */
+.category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    width: 30%; /* Adjusted width for responsive layout */
+    height: 350px; /* Fixed height for consistent sizing */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+}
+
+/* Ensure images maintain the same size and aspect ratio */
+.category img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.category span {
+    margin-top: 10px;
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #f9f9f9;
+    position: relative;
+}
+
+/* Arrow Styling */
+.category span::after {
+    content: '→'; /* Arrow symbol */
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+/* Hover Effects */
+.category:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #1a1a1a; /* Dark gray background for a modern look */
+    color: #fff;
+    padding: 40px 20px; /* Increased padding */
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Playfair Display', serif; /* Fancier font */
+}
+
+/* Footer Content Styling */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px; /* Space below content */
+}
+
+/* Contact Info Styling */
+.contact-info {
+    flex: 1;
+    text-align: left;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.contact-info a {
+    color: #f9f9f9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Social Media Styling */
+.social-media {
+    flex: 1;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-media p {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.social-icon {
+    font-size: 36px;
+    color: #fff;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effects for Each Icon */
+.social-icon.fa-instagram:hover {
+    color: brown; /* Brown highlight on hover for Instagram */
+}
+
+.social-icon.fa-square-facebook:hover {
+    color: blue; /* Blue highlight on hover for Facebook */
+}
+
+.social-icon.fa-square-pinterest:hover {
+    color: red; /* Red highlight on hover for Pinterest */
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .search-bar {
+        width: 80%;
+    }
+
+    .category-container {
+        flex-direction: row;
+    }
+
+    .category {
+        width: 100%;
+    }
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-bar {
+        width: 80%;
+        flex: 0 0 70%; /* Allow the search bar to take 70% of the width */
+        display: flex;
+        align-items: center;
+    }
+
+    /* Remove or adjust search-cart-wrapper */
+     .search-cart-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 10px;
+    } */
+
+    .category-container {
+        flex-direction: row;
+    }
+
+    .category {
+        width: 90%;
+    }
+
+    .search-bar input {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}

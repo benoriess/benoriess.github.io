@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benories Clothing</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <script src="https://kit.fontawesome.com/12664217d1.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <a href="home.html">
+                <img src="/logos/benories-high-resolution-logo-white-transparent.png" alt="Benories Logo">
+            </a>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search for products...">
+            <button onclick="searchProduct()">Search</button>
+        </div>
+    </header>
+
+    <!-- Result Message -->
+    <div id="resultMessage" class="result-message"></div>
+
+    <!-- Product Photo -->
+    <div id="productPhoto" class="product-photo"></div>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <h2>Shop by Category</h2>
+        <div class="category-container">
+            <a href="hoodies.html" class="category">
+                <img src="/tshirts/hoodie.jpg" alt="Hoodies">
+                <span>Hoodies</span>
+            </a>
+            <a href="tshirts.html" class="category">
+                <img src="/tshirts/gr.jpg" alt="T-shirts">
+                <span>T-shirts</span>
+            </a>
+            <a href="totes.html" class="category">
+                <img src="/tshirts/tote.jpg" alt="Tote Bags">
+                <span>Tote Bags</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Cart Dropdown -->
+    <div class="cart-dropdown" id="cartDropdown" style="display: none;">
+        <h3>Your Cart</h3>
+        <ul id="cartItems"></ul>
+        <p id="emptyCart">Your cart is empty.</p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="contact-info">
+                <p>Phone: <a href="tel:+212678901234">+212 678 901 234</a></p>
+                <p>Email: <a href="mailto:benoriesstore@gmail.com">benoriesstore@gmail.com</a></p>
+            </div>
+            <div class="social-media">
+                <p>Follow us on:</p>
+                <a href="https://www.instagram.com/benoriesstore/" target="_blank">
+                    <i class="fa-brands fa-instagram social-icon"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61564953538697" target="_blank">
+                    <i class="fa-brands fa-square-facebook social-icon"></i>
+                </a>
+                <a href="https://www.pinterest.com/benoriesstore/" target="_blank">
+                    <i class="fa-brands fa-square-pinterest social-icon"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Benories. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

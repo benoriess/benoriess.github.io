@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benories - Home</title>
+    <link rel="stylesheet" href="/css/style.css">
+ 
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="/logos/benories-favicon-white.png" alt="Benories Logo" class="logo">
+        </header>
+        <main>
+            <h1>Welcome to Benories</h1>
+            <p>Your style, reimagined.</p>
+            <button id="shopNowBtn">Visit Store</button>
+        </main>
+    </div>
+
+    <script>
+        document.getElementById("shopNowBtn").addEventListener("click", function() {
+            window.location.href = "/html/home.html"; // Redirect to the store.html page
+        });
+    </script>
+</body>
+</html>

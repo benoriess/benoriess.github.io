@@ -1,0 +1,72 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Black background for both pages */
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the homepage and store page */
+.container, .store-container {
+    text-align: center;
+}
+
+/* Positioning logo in the top left corner */
+header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+/* Logo size */
+.logo {
+    width: 100px;
+}
+
+/* Homepage and store text styling */
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+/* Button styling */
+button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: gray;
+}
+
+/* Product list styling for the store page */
+.product-list {
+    list-style: none;
+    margin-top: 20px;
+    padding: 0;
+}
+
+.product-list li {
+    font-size: 20px;
+    margin: 10px 0;
+}
