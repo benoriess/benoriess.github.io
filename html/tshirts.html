@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-Shirts Collection</title>
+    <link rel="stylesheet" href="/css/tshirts.css">
+    <script src="https://kit.fontawesome.com/12664217d1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+        <a href="home.html">
+            <img src="/logos/benories-high-resolution-logo-white-transparent.png" alt="Benories Logo">
+        </a>
+    </div>
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search for products...">
+        <button onclick="searchProduct()">Search</button>
+        <!-- Cart Icon Button -->
+        <button class="cart-icon">
+            <i class="fa fa-shopping-cart"></i>
+        </button>
+    </div>
+</header>
+
+    <!-- Horizontal Line Separator -->
+    <hr class="separator">
+
+    <!-- Page Header -->
+<div class="page-header">
+    
+    <nav class="breadcrumb-nav">
+        <a href="home.html" class="breadcrumb-link">Home</a>
+        <span class="breadcrumb-separator">
+            <i class="fa-solid fa-arrow-right"></i>
+        </span>
+        <span class="breadcrumb-current">T-Shirts</span>
+    </nav> <br>
+    <h1>Our Latest T-Shirts Collection</h1> <br>
+</div>
+
+
+    <!-- T-Shirts Collection Section -->
+    <section class="tshirt-collection">
+        <div class="tshirt-item" data-name="The Starry Night T-Shirt" onclick="window.location.href='starry.html';">
+            <img src="/tshirts/1.png" alt="The Starry Night T-Shirt">
+            <h2>The Starry Night T-Shirt</h2>
+            <p class="price">$25.00</p>
+        </div>
+        
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="contact-info">
+                <p>Phone: <a href="tel:+212678901234">+212 678 901 234</a></p>
+                <p>Email: <a href="mailto:benoriesstore@gmail.com">benoriesstore@gmail.com</a></p>
+            </div>
+            <div class="social-media">
+                <p>Follow us on:</p>
+                <a href="https://www.instagram.com/benoriesstore/" target="_blank">
+                    <i class="fa-brands fa-instagram social-icon"></i>
+                </a>
+                <a href="https://www.facebook.com/benories.store/" target="_blank">
+                    <i class="fa-brands fa-square-facebook social-icon"></i>
+                </a>
+                <a href="https://www.pinterest.com/benoriesstore/" target="_blank">
+                    <i class="fa-brands fa-square-pinterest social-icon"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Benories. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="/js/tshirts.js"></script>
+</body>
+</html>
