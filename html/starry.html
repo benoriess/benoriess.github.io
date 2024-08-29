@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starry Night T-Shirt</title>
+    <link rel="stylesheet" href="/css/starry.css">
+    <script src="https://kit.fontawesome.com/12664217d1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Free Shipping Banner -->
+    <div class="free-shipping-banner">
+        <p>Free shipping on orders over 350 DH!</p>
+    </div>
+
+    <!-- Header Section -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="home.html">
+                <img src="/logos/benories-high-resolution-logo-white-transparent.png" alt="Benories Logo">
+            </a>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search for products...">
+            <button onclick="searchProduct()">Search</button>
+            <!-- Cart Icon Button -->
+            <div class="cart-icon" id="cart-icon">
+                <span class="cart-count" id="cart-count">0</span>
+                <i class="fa fa-shopping-cart"></i>
+            </div>
+            <!-- Cart Drawer -->
+            <div id="cart-drawer" style="display: none;">
+                <button id="close-cart">Close</button>
+                <ul id="cart-items"></ul>
+                <div id="cart-total">0 MAD</div>
+                <button id="checkout-button">Checkout</button>
+            </div>
+        </div>
+            
+    </header>
+    
+    <div class="results-container"></div>
+
+    <!-- Horizontal Line Separator -->
+    <hr class="separator">
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- Slider Container -->
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide"><img src="/tshirts/1.png" alt="T-shirt Image 1"></div>
+                <div class="slide"><img src="/tshirts/2.png" alt="T-shirt Image 2"></div>
+                <!-- Add more slides as needed -->
+            </div>
+            <!-- Navigation Dots -->
+            <div class="nav-dots">
+                <!-- Dots will be dynamically created and managed by JavaScript -->
+            </div>
+        </div>
+        
+        <!-- Title under the slider -->
+        <div class="product-title">
+            <h2>The Starry Night T-Shirt</h2>
+        </div>
+        <div class="product-info">
+            <div class="price">
+                <span class="discounted-price">170 MAD</span>
+                <span class="original-price">220 MAD</span>
+            </div>
+        </div>
+        <div class="size-chart-container">
+            <button id="sizeChartButton">Size Chart</button>
+        </div>
+        
+        <!-- Size Chart Modal -->
+        <div id="sizeChartModal" class="size-chart-modal">
+            <div class="size-chart-content">
+                <span class="close">&times;</span>
+                <h2>T-Shirt Size Chart</h2>
+                <img src="/logos/size.png" alt="Size Chart" class="size-chart-image">
+            </div>
+        </div>
+        <div class="size-selector">
+            <div class="selected-size">Size: <span id="selectedSize">Select a size</span></div>
+            <div class="size-options">
+                <div class="size-option" data-size="S">S</div>
+                <div class="size-option" data-size="M">M</div>
+                <div class="size-option" data-size="L">L</div>
+                <div class="size-option" data-size="XL">XL</div>
+            </div>
+        </div>
+        <!-- Quantity Selector -->
+        <div class="quantity-container">
+            <span class="quantity-label">Quantity:</span>
+            <div class="quantity-control">
+                <button class="quantity-btn" id="decrease-quantity">-</button>
+                <input type="text" id="quantity-input" value="1" readonly />
+                <button class="quantity-btn" id="increase-quantity">+</button>
+            </div>
+        </div>
+        <div class="purchase-buttons">
+            <button id="add-to-cart-button" class="button">Add to Cart</button>
+            <button id="buy-now-button" class="button">Buy Now</button>
+        </div>
+        <!-- Description Section -->
+        <div class="tshirt-description">
+            <h3>About This T-Shirt</h3>
+            <p>
+                Introducing our exclusive T-shirt design, a captivating fusion of classic art and architectural heritage. This unique graphic features a stunning blend of Van Gogh's iconic "The Starry Night" with the majestic architecture of Meknes. On the back of the shirt, the swirling, star-studded sky of Van Gogh seamlessly intertwines with the intricate details of a renowned Meknes monument, creating a mesmerizing visual story. This artistic combination not only celebrates the timeless beauty of Van Gogh’s masterpiece but also pays homage to the rich cultural tapestry of Meknes. Wear this T-shirt to make a bold statement of artistic appreciation and cultural connection.
+            </p>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="contact-info">
+                <p>Phone: <a href="tel:+212678901234">+212 678 901 234</a></p>
+                <p>Email: <a href="mailto:benoriesstore@gmail.com">benoriesstore@gmail.com</a></p>
+            </div>
+            <div class="social-media">
+                <p>Follow us on:</p>
+                <a href="https://www.instagram.com/benoriesstore/" target="_blank">
+                    <i class="fa-brands fa-instagram social-icon"></i>
+                </a>
+                <a href="https://www.facebook.com/benories.store/" target="_blank">
+                    <i class="fa-brands fa-square-facebook social-icon"></i>
+                </a>
+                <a href="https://www.pinterest.com/benoriesstore/" target="_blank">
+                    <i class="fa-brands fa-square-pinterest social-icon"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Benories. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- Lightbox Modal -->
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox">
+    <span class="close-lightbox">&times;</span>
+    <img id="lightbox-image" class="lightbox-image" src="" alt="">
+    <div class="arrow left-arrow">&#10094;</div>
+    <div class="arrow right-arrow">&#10095;</div>
+</div>
+
+
+    <script src="/js/starry.js"></script>
+</body>
+</html>

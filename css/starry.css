@@ -1,0 +1,913 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    background-color: #000; /* Black Background */
+    color: white;
+    font-family: Arial, sans-serif;
+}
+.free-shipping-banner {
+    background-color: #61777F;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10; /* Ensure it is above the rest of the content */
+    border-bottom: 2px solid #61777F;
+}
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #222; /* Darker Background for the Navbar */
+    flex-wrap: wrap;
+}
+
+/* Logo Styling */
+.logo img {
+    height: 60px;
+}
+
+/* Search Bar Container Styling */
+.search-bar {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 0;
+    width: 100%;
+}
+
+/* Search Bar Styling */
+.search-bar input {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    background-color: #333; /* Darker Input Field */
+    color: white;
+    transition: width 0.4s ease;
+}
+
+.search-bar input:focus {
+    width: 100%;
+    max-width: 350px; /* Expands on focus */
+}
+
+/* Search Button Styling */
+.search-bar button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #777;
+}
+
+/* Cart Icon Styling */
+.cart-icon {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    margin-left: 10px;
+}
+
+/* Horizontal Line Separator */
+.separator {
+    border: 1px solid #444;
+    margin: 20px 0;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #1a1a1a; /* Dark gray background for a modern look */
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Playfair Display', serif; /* Fancier font */
+}
+
+/* Footer Content Styling */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+/* Contact Info Styling */
+.contact-info {
+    flex: 1;
+    text-align: left;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.contact-info a {
+    color: #f9f9f9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Social Media Styling */
+.social-media {
+    flex: 1;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-media p {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.social-icon {
+    font-size: 36px;
+    color: #fff;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effects for Each Icon */
+.social-icon.fa-instagram:hover {
+    color: brown;
+}
+
+.social-icon.fa-square-facebook:hover {
+    color: blue;
+}
+
+.social-icon.fa-square-pinterest:hover {
+    color: red;
+}
+
+/* Footer Bottom Styling */
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-bar {
+        width: 80%;
+        flex: 0 0 70%; /* Allow the search bar to take 70% of the width */
+        display: flex;
+        align-items: center;
+        margin-top: 10px; /* Space between logo and search bar */
+    }
+
+    .search-bar input {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* Container for search results */
+.results-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Spacing between T-shirt items */
+    margin-top: 20px;
+    padding: 10px;
+}
+
+/* Each T-shirt item */
+.results-container .tshirt-item {
+    background-color: #222; /* Background color */
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px;
+    text-align: center;
+    max-width: 250px; /* Set a maximum width for the items */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* T-shirt image */
+.results-container .tshirt-item img {
+    width: 100%; /* Make images responsive */
+    height: auto;
+    border-radius: 8px; /* Rounded corners for images */
+    margin-bottom: 10px;
+    transition: transform 0.3s ease; /* Add a zoom effect */
+}
+
+/* Zoom effect on hover */
+.results-container .tshirt-item:hover {
+    transform: translateY(-5px); /* Lift the item slightly on hover */
+}
+
+.results-container .tshirt-item img:hover {
+    transform: scale(1.1); /* Zoom in on hover */
+}
+
+/* T-shirt name */
+.results-container .tshirt-item h2 {
+    font-size: 18px;
+    color: #fff;
+    margin: 10px 0;
+}
+
+/* T-shirt price */
+.results-container .tshirt-item .price {
+    font-size: 16px;
+    color: #61777F; /* Highlight color for the price */
+    margin-bottom: 10px;
+}
+
+/* "View Details" button */
+.results-container .tshirt-item button {
+    padding: 8px 16px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.results-container .tshirt-item button:hover {
+    background-color: #777;
+}
+
+/* No results message */
+.no-results {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #444;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    margin: 20px auto; /* Centered horizontally */
+}
+/* Slider Container Styling */
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 300px; /* Adjust this value as needed */
+    margin: 0 auto;
+    overflow: hidden; /* Hide overflow to keep slider neat */
+}
+
+/* Slider Images */
+.slider-images {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.slider-images img {
+    width: 90%;
+    height: auto;
+    object-fit: cover; /* Ensure images cover their container without distortion */
+}
+
+/* Slider Dots */
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.slider-dots .dot {
+    height: 10px;
+    width: 10px;
+    background-color: gray;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.slider-dots .dot.active {
+    background-color: white;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.slide {
+    min-width: 100%; /* Each slide takes the full width of the container */
+    box-sizing: border-box; /* Include padding and border in width */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+}
+
+.slide img {
+    max-width: 100%; /* Ensure image fits within its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.nav-dots {
+    display: flex;
+    justify-content: center; /* Center the dots horizontally */
+    padding: 10px 0;
+}
+
+.nav-dot {
+    width: 10px; /* Dot size */
+    height: 10px;
+    background-color: #bbb; /* Inactive dot color */
+    border-radius: 50%; /* Circle shape */
+    margin: 0 5px; /* Space between dots */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-dot.active {
+    background-color: #fff; /* Active dot color */
+}
+
+/* Product Info Styling */
+.product-info {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Price Container Styling */
+.price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Discounted Price Styling */
+.discounted-price {
+    font-size: 24px;
+    color: #61777F; /* Highlight color for the discounted price */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Original Price Styling */
+.original-price {
+    font-size: 20px;
+    color: #aaa; /* Light gray for the original price */
+    text-decoration: line-through; /* Line-through for the original price */
+}
+/* Size Selector Styling */
+.size-selector {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Size Options Container Styling */
+.size-options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+/* Individual Size Option Styling */
+.size-option {
+    background-color: black; /* Default background color */
+    color: white; /* Default text color */
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 18px;
+    text-align: center;
+    border: 2px solid transparent; /* Add border for selected state */
+}
+
+/* Hover and Active State Styling */
+.size-option:hover {
+    background-color: #333; /* Slightly lighter background on hover */
+}
+
+.size-option.active {
+    background-color: white; /* Background color when selected */
+    color: black; /* Text color when selected */
+    border-color: white; /* Border color when selected */
+}
+
+/* Selected Size Display Styling */
+.selected-size {
+    font-size: 18px;
+    color: white;
+    margin-top: 10px;
+}
+
+/* Size Chart Button Styling */
+.size-chart-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#sizeChartButton {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#sizeChartButton:hover {
+    background-color: #333;
+}
+
+/* Size Chart Modal Styling */
+.size-chart-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+    padding-top: 60px;
+}
+
+.size-chart-content {
+    background-color: #222;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    text-align: center;
+}
+
+.size-chart-image {
+    width: 100%;
+    height: auto;
+}
+
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Purchase Buttons Container */
+.purchase-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Add to Cart Button */
+.add-to-cart,
+.buy-now {
+    background-color: #333; /* Darker background for contrast */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px; /* Rectangular corners */
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px 0;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 300px; /* Set width to match the container */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+/* Description Section Styling */
+.tshirt-description {
+    margin-top: 30px; /* Space above the description */
+    padding: 20px;
+    background-color: #222; /* Dark background for contrast */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    width: 100%;
+    max-width: 600px; /* Limit the width of the description */
+    margin: 30px auto; /* Centered horizontally with space above and below */
+    color: white; /* White text color for readability */
+    font-family: Arial, sans-serif; /* Font for the description */
+}
+
+/* Title of the Description */
+.tshirt-description h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #61777F; /* Highlight color for the title */
+}
+
+/* Paragraph Styling */
+.tshirt-description p {
+    font-size: 16px;
+    line-height: 1.6; /* Spacing between lines */
+    color: #e0e0e0; /* Slightly lighter text color */
+}
+
+
+/* Add to Cart Button Hover */
+.add-to-cart:hover {
+    background-color: #555;
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Buy Now Button */
+.buy-now {
+    background-color: #61777F; /* Highlight color for the Buy Now button */
+    color: white;
+}
+
+/* Buy Now Button Hover */
+.buy-now:hover {
+    background-color: #61777F;
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Cart Icon Styling */
+.cart-icon {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.cart-icon .cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Cart Drawer */
+#cart-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #61777F;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    padding: 20px;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+/* Close Button */
+#close-cart {
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* Checkout Button */
+#checkout-button {
+    margin-top: auto;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Cart Items List */
+#cart-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Cart Total */
+#cart-total {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+
+
+#cart-drawer.active {
+    display: block;
+    transform: translateX(0);
+}
+
+#close-cart {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+
+.cart-drawer h2 {
+    margin-top: 0;
+}
+
+.cart-drawer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cart-drawer ul li {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.cart-total {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#checkout-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .cart-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .cart-item-details {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .cart-item-name,
+  .cart-item-price {
+    margin: 0;
+  }
+  
+  .cart-item-delete {
+    font-size: 18px;
+    color: #ff0000; /* Red color for delete icon */
+    cursor: pointer;
+  }
+  
+  .cart-item-delete:hover {
+    color: #cc0000; /* Darker red for hover effect */
+  }
+  
+
+
+#checkout-button:hover {
+    background-color: #0056b3;
+}
+
+.close-cart {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Common Button Styling */
+.button {
+    display: inline-block;
+    background-color: #61777F; /* Blue background */
+    color: #fff; /* White text */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin: 10px 0; /* Space between buttons */
+    height: 50px;
+    width: 250px;
+}
+/* Quantity Container Styling */
+/* Quantity Container Styling */
+.quantity-container {
+    text-align: center;
+    margin: 20px auto; /* Center horizontally */
+    max-width: 150px; /* Set a maximum width */
+}
+
+/* Quantity Control Styling */
+.quantity-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #333;
+    border-radius: 5px;
+    overflow: hidden; /* Hide overflow to make it look like a single button */
+    background-color: #222;
+    max-width: 100%; /* Ensure it doesn't exceed the container width */
+    width: auto; /* Allow the width to adjust based on content */
+}
+
+/* Quantity Button Styling */
+.quantity-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    flex: 1; /* Make buttons take equal width */
+    transition: background-color 0.3s ease;
+}
+
+.quantity-btn:hover {
+    background-color: #555;
+}
+
+/* Quantity Input Styling */
+#quantity-input {
+    width: 60px; /* Adjust width to fit the design */
+    text-align: center;
+    border: none; /* Remove border to blend with background */
+    font-size: 18px;
+    color: white;
+    background-color: #222;
+}
+
+
+
+.button:hover {
+    background-color: #8ba7b1; /* Darker blue on hover */
+}
+
+/* Specific Styling for Add to Cart Button */
+
+
+.grabbing {
+    cursor: grabbing;
+}
+
+
+/* Show the active slide */
+.slide.active {
+    display: flex;
+}
+
+/* Slider Controls */
+.slider-controls {
+    display: none; /* Hide the controls */
+}
+
+.slider-controls button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.slider-controls button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Product Title Styling */
+.product-title {
+    text-align: center;
+    margin: 20px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.product-title h2 {
+    color: white;
+    font-size: 24px; /* Adjusted font size */
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+
+
+/* Lightbox Styling */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.lightbox-image {
+    max-width: 80%;
+    max-height: 80%;
+    transition: transform 0.3s ease;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.left-arrow {
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+.right-arrow {
+    right: 10px;
+    transform: translateY(-50%);
+}
